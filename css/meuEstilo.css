@@ -1,0 +1,11 @@
+.sImage {
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vTotal {
+    height: 30px;
+    margin-top: -50px;
+}
