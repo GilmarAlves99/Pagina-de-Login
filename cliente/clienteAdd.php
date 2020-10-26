@@ -14,10 +14,10 @@ $query = "INSERT INTO clientes(nome,endereco, telefone, email) VALUES(:x, :y, :z
 
 $statement = $conexao->prepare($query);
 
-$statement->bindValue("x", $nome, PDO::PARAM_STR);
-$statement->bindValue("y", $endereco, PDO::PARAM_STR);
-$statement->bindValue("z", $telefone, PDO::PARAM_STR);
-$statement->bindValue("w", $email, PDO::PARAM_STR);
+$statement->bindvalue("x", $nome, PDO::PARAM_STR);
+$statement->bindvalue("y", $endereco, PDO::PARAM_STR);
+$statement->bindvalue("z", $telefone, PDO::PARAM_STR);
+$statement->bindvalue("w", $email, PDO::PARAM_STR);
 
 //EXECUTAR O INSERT
 $statement->execute();

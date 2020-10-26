@@ -20,7 +20,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <a class="nav-item nav-link active" href="#">Pagina Inicial <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="pageAdm.php">Menu Administração</a>
-                    <a class="nav-item nav-link" href="login.php">Logout</a>
+                  
                 </div>
             </nav>
 
