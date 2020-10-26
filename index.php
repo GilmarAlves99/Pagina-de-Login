@@ -7,47 +7,38 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/meuEstilo.css">
 
-    <title>Conecte-se Login</title>
+    <title>Pagina Incial</title>
 </head>
 <body>
-    
-    <div class="container">
+        <div class="container">
+            <!-- Criando nossa NavBar [Barra de menu] -->
+            <nav  class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#"> SoftLogin</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <a class="nav-item nav-link active" href="#">Pagina Inicial <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="pageAdm.php">Menu Administração</a>
+                    <a class="nav-item nav-link" href="login.php">Logout</a>
+                </div>
+            </nav>
 
-        <div class="row justify-content-center vTotal">
+            <div class="row align-items-center vTotal">
+                <div class="col-12">
+                    <img src="img/ok.png" class="sImage">
+                    <h1 class="text-center"> Pagina Incial</h1>
+                    <p class="lead text-center ">
+                        Está página está simulando uma página Principal de acesso comum a todos os usuários (logados ou não), e através do menu Login 
+                        podemos iniciar o processo de autenticação!
+                    </p>
 
-            <div class="col-6 align-self-center">
-
-                <img src="img/user.png" class="sImage">
-                <h1 class="text-center">Conecte-se <span class="lead">Faça o login</span></h1>
-
-                <form action="validarLogin.php" method="POST">
-                    <div class="form-group row">
-                        <label for="email" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="senha" class="col-sm-2 col-form-label">Password</label>
-                        <div class="col-sm-10">
-                        <input type="password" class="form-control" name="senha" id="senha" placeholder="Password">
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Sign in</button>
-                        </div>
-                    </div>
-                </form>
-
+                </div>
             </div>
         </div>
-    </div>
 
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  </body>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
-</html>
+    </html>
