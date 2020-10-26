@@ -11,7 +11,7 @@ class ConexaoPDO{
                 self::$pdo = new PDO(CONECTOR. ":host=" .HOST. "; port=" .PORT. "; dnname=" .DBNAME. "; charset=" .CHARSET. ";", USER,PASSWORD);
             }
             catch(PDOException $e){
-                echo "Eroo: " . $e ->getMessage();
+                echo "Erro: " . $e->getMessage();
             }
         }
         return self::$pdo;
