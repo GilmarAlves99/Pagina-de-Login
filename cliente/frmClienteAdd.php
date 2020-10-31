@@ -18,7 +18,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <a class="nav-item nav-link active" href="#">Pagina Inicial <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="./Pagina-de-Login/index.php">Pagina Inicial <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="pageAdm.php">Menu Administração</a>
                 <a class="nav-item nav-link" href="login.php">Logout</a>
             </div>
@@ -26,51 +26,84 @@
 
         <div class="row">
             <div class="col-12">
+                <h1 class="text-center">Cadastrar Cliente </h1>
                 <form action="clienteAdd.php">
                     <label for="iName">Nome do Cliente:</label>
-                    <input type="text" id="iNome" name="iNome" />
+                    <input class="form-control" type="text" id="iNome" name="iNome" />
                     <br>
 
                     <label for="iEndereco">Endereço:</label>
-                    <input type="text" id="iEndereco" name="iEndereco" />
+                    <input class="form-control" type="text" id="iEndereco" name="iEndereco" />
                     <br>
 
                     <label for="iTelefone">Telefone:</label>
-                    <input type="text" id="iTelefone" name="iTelefone" />
+                    <input class="form-control" type="text" id="iTelefone" name="iTelefone" />
                     <br>
 
                     <label for="iName">Email:</label>
-                    <input type="text" id="iEmail" name="iEmail" />
+                    <input class="form-control" type="text" id="iEmail" name="iEmail" />
                     <br>
-                    <input type="submit" value="Cadastrar" />
+                    <input class="btn btn-primary btn-block" type="submit" value="Cadastrar" />
 
                 </form>
             </div>
+          
         </div>
-        <?php include_once "tblListaClientes.php"; ?>
-        <?php
-        require_once "../conexao/ConexaoPDO.php";
-        $conexao = ConexaoPDO::getInstance();
-        $query = "SELECT * from clientes";
-        $statement = $conexao->prepare($query);
-        $statement->execute();
-        $resultado = $statement->fetchAll();
-        ?>
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="row">
             <div class="col-12">
-                <table class="table table-stip table-sm">
+                <table class="table table-striped table-sm">
                     <thead>
                         <tr>
                             <th scope="col">Id</th>
                             <th scope="col">Nome</th>
+                            <th scope="col">Endereço</th>
                             <th scope="col">Telefone</th>
                             <th scope="col">Email</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        foreach ($resultado as $clientes => $clientes) {
+                        foreach($resultado as $clientes => $cliente) {
                         ?>
                             <tr>
                                 <th scope="row"><?php echo $cliente["id"]; ?></th>

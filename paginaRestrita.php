@@ -22,7 +22,7 @@ if (isset($_SESSION['email'])) {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <a class="nav-item nav-link active" href="#">Pagina Inicial <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="index.php">Pagina Inicial <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="pageAdm.php">Menu Administração</a>
                     <a class="nav-item nav-link" href="cliente/frmClienteAdd.php">Cadastro de Cliente</a>
                     <a class="nav-item nav-link" href="login.php">Logout</a>
