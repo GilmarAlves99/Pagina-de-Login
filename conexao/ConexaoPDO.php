@@ -8,10 +8,10 @@ class ConexaoPDO{
     public static function getInstance(){
         if(!isset(self::$pdo)){
             try{
-                self::$pdo = new PDO(CONECTOR. ":host=" .HOST. "; port=" .PORT. "; dnname=" .DBNAME. "; charset=" .CHARSET. ";", USER,PASSWORD);
+                self::$pdo = new PDO(CONECTOR.":host=".HOST.";port=".PORT.";dbname=".DBNAME.";charset=".CHARSET.";",USER,PASSWORD);
             }
             catch(PDOException $e){
-                echo "Erro: " . $e->getMessage();
+                echo "Erro: ".$e->getMessage();
             }
         }
         return self::$pdo;

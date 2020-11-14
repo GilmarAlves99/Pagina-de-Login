@@ -18,26 +18,27 @@ if (isset($_POST['email'], $_POST['senha'])) {
 
         //EXECUTANDO A CONSULTA E RETORNADO O OBJETO
         $statement->execute();
-        $statement=$statement->fetchObject();
+        $usuario=$statement->fetchObject();
+       
 
         //verifica se os dados digitados conferem
-        //   if ($email == $usuario->$email and $senha == $usuario->$senha) {
-        if ($email == "email@email.com" and $senha == "1234") {
+           if ($email == $usuario->email and $senha == $usuario->senha) {
+       // if ($email == "email@email.com" and $senha == "1234") {
             //recebe os dados
             session_start();
             $_SESSION['email'] = $email;
             //Direciona para páginaRestrita.php
-            echo "<script>location.href='paginaRestrita.php'</script>";
+ echo "<script>location.href='paginaRestrita.php'</script>";
         } else {
             //Direciona para Logina.php
-            echo "<script>location.href='login.php'</script>";
+        echo "<script>location.href='login.php'</script>";
         }
     } else {
         //Direciona para Logina.php
-        echo "<script>location.href='login.php'</script>";
+      echo "<script>location.href='login.php'</script>";
     }
 } else {
     //Direciona para Index.php
-    echo "<script>location.href='index.php'</script>";
+ echo "<script>location.href='index.php'</script>";
 }
 ?>
